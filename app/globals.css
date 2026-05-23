@@ -1,26 +1,90 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* stylelint-disable */
+/* @theme is valid Tailwind v4 syntax — the VS Code CSS linter warning is a false positive */
+@theme {
+  /* ── Fonts (reference next/font-loaded variables) ── */
+  --font-hanken: var(--font-hanken-src);
+  --font-inter:  var(--font-inter-src);
+  --font-mono:   var(--font-mono-src);
+
+  /* ── Border Radius ── */
+  --radius:      0.25rem;
+  --radius-sm:   0.25rem;
+  --radius-md:   0.5rem;
+  --radius-lg:   0.5rem;
+  --radius-xl:   0.75rem;
+  --radius-2xl:  1.5rem;
+  --radius-full: 9999px;
+
+  /* ── Primary (Rose) ── */
+  --color-primary:                  #8c0026;
+  --color-on-primary:               #ffffff;
+  --color-primary-container:        #e11d48;
+  --color-on-primary-container:     #ffc5c7;
+  --color-primary-fixed:            #ffdada;
+  --color-primary-fixed-dim:        #ffb3b6;
+  --color-on-primary-fixed:         #40000c;
+  --color-on-primary-fixed-variant: #920028;
+  --color-inverse-primary:          #ffb3b6;
+  --color-surface-tint:             #bd0838;
+
+  /* ── Secondary (Violet) ── */
+  --color-secondary:                  #6f46b9;
+  --color-on-secondary:               #ffffff;
+  --color-secondary-container:        #b188ff;
+  --color-on-secondary-container:     #44118d;
+  --color-secondary-fixed:            #ebdcff;
+  --color-secondary-fixed-dim:        #d3bbff;
+  --color-on-secondary-fixed:         #260059;
+  --color-on-secondary-fixed-variant: #562b9f;
+
+  /* ── Tertiary ── */
+  --color-tertiary:                  #484246;
+  --color-on-tertiary:               #ffffff;
+  --color-tertiary-container:        #60595e;
+  --color-on-tertiary-container:     #dbd1d6;
+  --color-tertiary-fixed:            #eae0e6;
+  --color-tertiary-fixed-dim:        #cec4ca;
+  --color-on-tertiary-fixed:         #1f1a1e;
+  --color-on-tertiary-fixed-variant: #4b454a;
+
+  /* ── Surfaces ── */
+  --color-surface:                    #faf8ff;
+  --color-surface-dim:                #f1d3d3;
+  --color-surface-bright:             #fff8f7;
+  --color-surface-container-lowest:   #ffffff;
+  --color-surface-container-low:      #fff0f0;
+  --color-surface-container:          #eaedff;
+  --color-surface-container-high:     #ffe1e2;
+  --color-surface-container-highest:  #f9dcdc;
+  --color-surface-variant:            #f9dcdc;
+  --color-on-surface:                 #271718;
+  --color-on-surface-variant:         #5b4041;
+  --color-inverse-surface:            #3e2c2c;
+  --color-inverse-on-surface:         #ffedec;
+
+  /* ── Background ── */
+  --color-background:     #fff8f7;
+  --color-on-background:  #271718;
+  --color-rose-tint-bg:   #fdf2f8;
+  --color-slate-neutral:  #0f172a;
+
+  /* ── Outline ── */
+  --color-outline:         #906f70;
+  --color-outline-variant: #e4bdbe;
+
+  /* ── Error ── */
+  --color-error:              #ba1a1a;
+  --color-on-error:           #ffffff;
+  --color-error-container:    #ffdad6;
+  --color-on-error-container: #93000a;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    font-family: var(--font-inter);
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
