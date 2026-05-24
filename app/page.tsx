@@ -1,12 +1,13 @@
 import Link from "next/link";
+import BrandIcon from "@/app/components/BrandIcon";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-rose-tint-bg font-inter">
       <header className="border-b border-outline-variant bg-surface-container-lowest px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center">
-            <span className="text-on-primary font-hanken font-bold text-sm">CB</span>
+          <div className="w-9 h-9 rounded-lg bg-white flex items-center justify-center">
+            <BrandIcon size={22} />
           </div>
           <span className="font-hanken font-bold text-primary text-lg">Calorie Buddy</span>
         </div>

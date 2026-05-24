@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { signInWithEmail, signInWithGoogle } from "@/lib/firebase/auth";
+import BrandIcon from "@/app/components/BrandIcon";
 import { FirebaseError } from "firebase/app";
 
 function GoogleIcon() {
@@ -81,8 +82,8 @@ export default function LoginPage() {
 
           {/* Header */}
           <div className="flex flex-col items-center text-center mb-6">
-            <div className="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center mb-4">
-              <span className="text-on-primary font-hanken font-bold text-lg">CB</span>
+            <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center mb-4">
+              <BrandIcon size={28} />
             </div>
             <h1 className="font-hanken text-2xl font-bold text-primary mb-1">Welcome back</h1>
             <p className="text-sm text-on-surface-variant">Sign in to continue tracking your goals</p>
